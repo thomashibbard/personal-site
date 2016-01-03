@@ -1,0 +1,41 @@
+{
+  "name": "personal-site",
+  "engines": {
+    "node" "4.2.2"
+  },
+  "version": "0.0.1",
+  "description": "personal website",
+    "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomashibbard/personal-site.git"
+  },
+  "author": "Thomas Hibbard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomashibbard/personal-site/issues"
+  },
+  "homepage": "https://github.com/thomashibbard/personal-site#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-inject": "^3.0.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-ruby-sass": "^2.0.6",
+    "jshint": "^2.8.0",
+    "run-sequence": "^1.1.5",
+    "wiredep": "^3.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "gulp-open": "^1.0.0",
+    "gulp-shell": "^0.5.1"
+  }
+}

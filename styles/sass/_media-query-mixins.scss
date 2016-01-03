@@ -1,0 +1,14 @@
+@mixin bp($point) {
+  @if $point == grd {
+    @media (min-width: 1800px) { @content; }
+  }
+  @else if $point == big{
+    @media (min-width: 1600px) { @content; }
+  }
+  @else if $point == med {
+    @media (min-width: 1250px) { @content; }
+  }
+  @else if $point == sml {
+    @media (min-width: 600px)  { @content; }
+  }
+}
