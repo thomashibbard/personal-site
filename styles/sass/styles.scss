@@ -1,6 +1,8 @@
 @import "./overrides/skeleton-overrides.scss";
 @import "./overrides/media-overrides.scss";
 
+@import "./media-query-mixins.scss";
+
 /*color variables*/
 $rich-black: #353030;
 

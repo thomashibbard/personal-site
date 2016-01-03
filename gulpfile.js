@@ -6,8 +6,13 @@
     , wiredep = require('wiredep').stream
     , sequence = require('run-sequence')
     , angularFilesort = require('gulp-angular-filesort')
-    , jshint = require('gulp-jshint');
+    , jshint = require('gulp-jshint')
+    , shell = require('gulp-shell')
+    , open = require('gulp-open');
+    //, plugins = require('gulp-load-plugins');
 
+
+    var PORT = 5111;
 
   gulp.task('default', function(){
     console.log('TESTS'.red.bold);
@@ -76,6 +81,28 @@
   gulp.task('watch-js', function(){
     gulp.watch('./app/**/*.js', ['inject-js'])
   });
+
+
+gulp.task('browser', function (callback) {
+    sequence(['browser-server', 'browser-open' ], callback);
+});
+
+gulp.task('browser-server', shell.task([
+    'node server.js'
+]));
+
+gulp.task('browser-open', false, function () {
+    var options = {
+        url : "http://localhost:5111/#/",
+        app : "Google Chrome"
+    };
+    return gulp.src('./index.html')
+        .pipe(open("", options));
+});
+
+
+
+
 
 
 
