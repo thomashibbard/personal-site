@@ -1,0 +1,45 @@
+@import "./overrides/skeleton-overrides.scss";
+@import "./overrides/media-overrides.scss";
+
+/*color variables*/
+$rich-black: #353030;
+
+/*other variables*/
+$standard-animation-duration: 0.2s;
+
+html, body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #F1F1F1;
+}
+html, body, .container{
+  height: 100%;
+}
+
+.container{
+  background-color: #FFFFFF;
+}
+footer{
+  width: 100%;
+  background-color: $rich-black;
+
+  .footer-link{
+    display: inline-block;
+    text-align: center;
+    color: #EFEFEF;
+    padding: 15px;
+    cursor: pointer;
+    transition: all $standard-animation-duration;
+
+    &:hover{
+      box-shadow: inset 3px 4px 16px -4px rgba(0, 0, 0, 1);
+      background-color: #332F2F;
+    }
+    &:active{
+      box-shadow: inset 3px 4px 16px -4px rgba(0, 0, 0, 1);
+      background-color: #1B1818;
+    }
+  }
+
+}

@@ -2,6 +2,7 @@
    // , plugins = require('gulp-load-plugins')
     , inject = require('gulp-inject')
     , sass = require('gulp-ruby-sass')
+    , autoprefixer = require('gulp-autoprefixer')
     , wiredep = require('wiredep').stream
     , sequence = require('run-sequence')
     , angularFilesort = require('gulp-angular-filesort')
@@ -60,8 +61,13 @@
 
   gulp.task('sass', function() {
       return sass('./styles/sass/**/*.scss', { style: 'expanded' })
-          .pipe(gulp.dest('./styles/css/'));
+          .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+          }))
+          .pipe(gulp.dest('styles/css/'));
   });
+
 
   gulp.task('watch-sass', function () {
       gulp.watch('./styles/sass/**/*.scss', ['sass']);
