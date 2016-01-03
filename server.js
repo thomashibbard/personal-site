@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 //custom modules
 
-const PORT = 5111;
+const PORT = process.env.PORT || 5111;
 app.use(cors());
 
 var whitelist = ['http://localhost:' + PORT + '/'];
