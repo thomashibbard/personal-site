@@ -34,6 +34,11 @@ footer {
   bottom: 0;
   background-color: #353030;
 }
+@media (max-width: 600px) {
+  footer .footer-segment:nth-of-type(3) {
+    border-top: 1px solid #222;
+  }
+}
 footer .footer-link {
   display: inline-block;
   text-align: center;
@@ -49,4 +54,9 @@ footer .footer-link:hover {
 footer .footer-link:active {
   box-shadow: inset 3px 4px 16px -4px black;
   background-color: #1B1818;
+}
+@media (max-width: 600px) {
+  footer .empty-menu-item {
+    visibility: hidden;
+  }
 }

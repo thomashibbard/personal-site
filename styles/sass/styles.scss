@@ -27,7 +27,13 @@ footer{
   position: absolute;
   bottom: 0;
   background-color: $rich-black;
-
+  .footer-segment{
+    &:nth-of-type(3){
+      @include bp(sml){
+        border-top: 1px solid #222;
+      }
+    }    
+  }
   .footer-link{
     display: inline-block;
     text-align: center;
@@ -43,6 +49,12 @@ footer{
     &:active{
       box-shadow: inset 3px 4px 16px -4px rgba(0, 0, 0, 1);
       background-color: #1B1818;
+    }
+
+  }
+  .empty-menu-item{
+    @include bp(sml){
+      visibility: hidden;
     }
   }
 
