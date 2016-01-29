@@ -28,7 +28,6 @@ html, body {
 html .header-font, body .header-font {
   font: 300 Italic 8rem Volkhov, serif;
   display: inline-block;
-  background: yellow;
   /*     padding-right: 30px;
       padding-left: 30px;   */
   display: inline-block;
@@ -41,7 +40,7 @@ html, body, .container {
 
 .container {
   background-color: #FFFFFF;
-  padding-top: 40px;
+  padding-top: 60px;
   position: relative;
   margin: 0 auto;
   top: 0;
@@ -126,6 +125,7 @@ header .footer-link {
   border: 1px solid #efefef;
   background: #F3F3F3;
   padding: 1px;
+  padding-right: 40px;
 }
 #main-content .side-strip {
   height: 100%;
