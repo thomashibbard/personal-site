@@ -14,7 +14,11 @@ angular.module('siteApp', ['ngRoute'])
           templateUrl : './app/scripts/work/work.html',
           controller  : 'workCtrl'
       })
-      .otherwise({redirectTo:'/home'});
+      .when('/about', {
+          templateUrl : './app/scripts/about/about.html',
+          controller  : 'aboutCtrl'
+      })      
+      .otherwise({redirectTo:'/about'});
 
       /*$locationProvider.html5Mode(true);*/
 

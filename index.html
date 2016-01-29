@@ -7,26 +7,21 @@
   <link rel="stylesheet" href="bower_components/skeleton/css/skeleton.css" />
   <!-- endbower -->
   <!-- inject:css -->
+  <link rel="stylesheet" href="/styles/css/fonts.css">
   <link rel="stylesheet" href="/styles/css/styles.css">
   <!-- endinject -->
   <base href="/">
 </head>
 
 <body ng-app="siteApp">
+  <site-uber-header></site-uber-header>
   <div class="container" ng-controller="mainCtrl">
-    <section class="header">
-      <div class="title">
-        <div class="row">
-          <div class="twelve columns">
-            <img class="rose-icon"/>
-            <h2>=</h2> 
-            <div ng-view></div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <site-header></site-header>
+    <div id="main-content">
+      <div ng-view></div>
+    </div> 
   </div>
-  <site-footer></site-footer>
+<!--   <site-footer></site-footer> -->
 </body>
 
   <!-- bower:js -->
@@ -36,12 +31,15 @@
   
   <!-- inject:js -->
   <script src="/app/app.js"></script>
+  <script src="/app/scripts/shared/siteUberHeader/siteUberHeaderController.js"></script>
+  <script src="/app/scripts/shared/siteHeader/siteHeaderController.js"></script>
   <script src="/app/scripts/shared/siteFooter/siteFooterController.js"></script>
-  <script src="/app/scripts/shared/directives.js"></script>
   <script src="/app/scripts/work/workController.js"></script>
-  <script src="/app/scripts/home/homeController.js"></script>
+  <script src="/app/scripts/shared/directives.js"></script>
   <script src="/app/scripts/main/mainController.js"></script>
+  <script src="/app/scripts/home/homeController.js"></script>
   <script src="/app/scripts/history/historyController.js"></script>
+  <script src="/app/scripts/about/aboutController.js"></script>
   <!-- endinject -->
 </html>
 
